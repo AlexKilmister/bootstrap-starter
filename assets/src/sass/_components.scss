@@ -1,0 +1,42 @@
+//@import "sprite";
+
+// buttons, form-components
+.btn {
+	outline: none;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+
+	&:focus,
+	&:hover,
+	&:active {
+		outline: none;
+		text-decoration: none;
+	}
+}
+
+.btn-green {
+	@include rb;
+	color: #ffffff;
+	font-size: 1em;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	border: 0;
+	border-radius: 2px;
+	@include transition;
+	background-color: #00c600;
+
+	&:focus {
+		color: #ffffff;
+	}
+
+	&:hover {
+		color: #ffffff;
+		background-color: #00dd00;
+	}
+
+	&:active {
+		background-color: green;
+	}
+}

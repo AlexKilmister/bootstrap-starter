@@ -1,0 +1,202 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$basket-w-name: 'basket-w';
+$basket-w-x: 0px;
+$basket-w-y: 0px;
+$basket-w-offset-x: 0px;
+$basket-w-offset-y: 0px;
+$basket-w-width: 35px;
+$basket-w-height: 29px;
+$basket-w-total-width: 59px;
+$basket-w-total-height: 54px;
+$basket-w-image: '../img/sprite.png';
+$basket-w: (0px, 0px, 0px, 0px, 35px, 29px, 59px, 54px, '../img/sprite.png', 'basket-w', );
+$calculator-name: 'calculator';
+$calculator-x: 0px;
+$calculator-y: 34px;
+$calculator-offset-x: 0px;
+$calculator-offset-y: -34px;
+$calculator-width: 15px;
+$calculator-height: 20px;
+$calculator-total-width: 59px;
+$calculator-total-height: 54px;
+$calculator-image: '../img/sprite.png';
+$calculator: (0px, 34px, 0px, -34px, 15px, 20px, 59px, 54px, '../img/sprite.png', 'calculator', );
+$facebook-w-name: 'facebook-w';
+$facebook-w-x: 40px;
+$facebook-w-y: 0px;
+$facebook-w-offset-x: -40px;
+$facebook-w-offset-y: 0px;
+$facebook-w-width: 19px;
+$facebook-w-height: 19px;
+$facebook-w-total-width: 59px;
+$facebook-w-total-height: 54px;
+$facebook-w-image: '../img/sprite.png';
+$facebook-w: (40px, 0px, -40px, 0px, 19px, 19px, 59px, 54px, '../img/sprite.png', 'facebook-w', );
+$basket-w-2x-name: 'basket-w@2x';
+$basket-w-2x-x: 0px;
+$basket-w-2x-y: 0px;
+$basket-w-2x-offset-x: 0px;
+$basket-w-2x-offset-y: 0px;
+$basket-w-2x-width: 70px;
+$basket-w-2x-height: 58px;
+$basket-w-2x-total-width: 118px;
+$basket-w-2x-total-height: 108px;
+$basket-w-2x-image: '../img/sprite@2x.png';
+$basket-w-2x: (0px, 0px, 0px, 0px, 70px, 58px, 118px, 108px, '../img/sprite@2x.png', 'basket-w@2x', );
+$calculator-2x-name: 'calculator@2x';
+$calculator-2x-x: 0px;
+$calculator-2x-y: 68px;
+$calculator-2x-offset-x: 0px;
+$calculator-2x-offset-y: -68px;
+$calculator-2x-width: 30px;
+$calculator-2x-height: 40px;
+$calculator-2x-total-width: 118px;
+$calculator-2x-total-height: 108px;
+$calculator-2x-image: '../img/sprite@2x.png';
+$calculator-2x: (0px, 68px, 0px, -68px, 30px, 40px, 118px, 108px, '../img/sprite@2x.png', 'calculator@2x', );
+$facebook-w-2x-name: 'facebook-w@2x';
+$facebook-w-2x-x: 80px;
+$facebook-w-2x-y: 0px;
+$facebook-w-2x-offset-x: -80px;
+$facebook-w-2x-offset-y: 0px;
+$facebook-w-2x-width: 38px;
+$facebook-w-2x-height: 38px;
+$facebook-w-2x-total-width: 118px;
+$facebook-w-2x-total-height: 108px;
+$facebook-w-2x-image: '../img/sprite@2x.png';
+$facebook-w-2x: (80px, 0px, -80px, 0px, 38px, 38px, 118px, 108px, '../img/sprite@2x.png', 'facebook-w@2x', );
+$spritesheet-width: 59px;
+$spritesheet-height: 54px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($basket-w, $calculator, $facebook-w, );
+$spritesheet: (59px, 54px, '../img/sprite.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 118px;
+$retina-spritesheet-height: 108px;
+$retina-spritesheet-image: '../img/sprite@2x.png';
+$retina-spritesheet-sprites: ($basket-w-2x, $calculator-2x, $facebook-w-2x, );
+$retina-spritesheet: (118px, 108px, '../img/sprite@2x.png', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$basket-w-group-name: 'basket-w';
+$basket-w-group: ('basket-w', $basket-w, $basket-w-2x, );
+$calculator-group-name: 'calculator';
+$calculator-group: ('calculator', $calculator, $calculator-2x, );
+$facebook-w-group-name: 'facebook-w';
+$facebook-w-group: ('facebook-w', $facebook-w, $facebook-w-2x, );
+$retina-groups: ($basket-w-group, $calculator-group, $facebook-w-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

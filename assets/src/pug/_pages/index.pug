@@ -1,0 +1,23 @@
+extend template
+
+block title
+	//-Title страницы
+	title Home
+	-var wrapperClass = 'wrapper'
+
+prepend css
+
+block header
+	include ../_templates/header-main
+
+prepend body
+
+block content
+	main.content
+
+
+block footer
+	include ../_templates/footer
+
+block scripts
+	include ../_parts/scripts

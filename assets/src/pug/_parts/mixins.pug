@@ -1,0 +1,15 @@
+mixin section_heading(text,addClass)
+    -var a = addClass
+    if(!a)
+        h2.heading&attributes(attributes)=text
+    else
+        h2.heading(class=addClass)&attributes(attributes)=text
+
+mixin styles(...files)
+    each file in files
+        link(rel="stylesheet" href=file)
+
+mixin icon(name,mod)
+    - mod = mod || ''
+    svg(class="svg-icon icon-" + name + ' ' + mod)
+        use(xlink:href="img/spriteSVG.svg#" + name)

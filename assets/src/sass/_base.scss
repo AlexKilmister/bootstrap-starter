@@ -1,0 +1,141 @@
+@import "mixin";
+
+body {
+	position: relative;
+	min-width: 320px;
+	color: $color-base;
+	overflow-x: hidden;
+	padding: 0;
+	margin: 0 auto;
+	font-family: $font-main;
+	font-size: $browser-context;
+	font-weight: $font-weight-main;
+	line-height: $line-height-main;
+	background: $color-white;
+	font-smoothing: antialiased;
+	text-size-adjust: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+	font-weight: normal;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+ul,
+ol {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+body a,
+body button {
+	outline: none;
+
+	&:hover,
+	&:focus {
+		outline: none;
+		text-decoration: none;
+	}
+}
+
+input,
+textarea {
+	&:focus {
+		outline: none;
+	}
+}
+
+.slick-slide:focus {
+	outline: none;
+}
+
+.tabs__content {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.question-block {
+	display: none;
+}
+
+table {
+	table-layout: fixed;
+	width: 100%;
+
+	td {
+		word-wrap: break-word;
+	}
+}
+
+.wrapper {
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.footer {
+	width: 100%;
+}
+
+.content {
+	width: 100%;
+	flex-grow: 1;
+}
+
+.header {
+	width: 100%;
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+
+//.container {
+//	width: 100%;
+//	padding: 0 15px;
+//	position: relative;
+//	margin: 0 auto;
+//	max-width: r-vw($container-xl);
+//}
+
+.tabs {
+	position: relative;
+
+	&__content {
+		position: absolute;
+		visibility: hidden;
+		opacity: 0;
+		width: 100%;
+		top: 0;
+		left: 0;
+
+		&.active {
+			position: relative;
+			visibility: visible;
+			opacity: 1;
+			@include transition(opacity);
+		}
+	}
+}
+

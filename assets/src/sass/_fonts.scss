@@ -1,0 +1,7 @@
+@import "mixin";
+
+@include font-face("RobotoBold", "../fonts/RobotoBold", 400, normal, "modern");
+@include font-face("RobotoMedium", "../fonts/RobotoMedium", 400, normal, "modern");
+@include font-face("RobotoRegular", "../fonts/RobotoRegular", 400, normal, "modern");
+@include font-face("RobotoLight", "../fonts/RobotoLight", 400, normal, "modern");
+@include font-face("RobotoThin", "../fonts/RobotoThin", 400, normal, "modern");
